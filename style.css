@@ -1,0 +1,136 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    background-color:whitesmoke;
+}
+
+.top {
+    padding: 20px;
+    background-image: url("img1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:100px;
+
+}
+
+.logo {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.logo table {
+    width: 100%;
+}
+
+.logo td:first-child {
+    font-size: 50px;
+    font-family: 'forte', cursive;
+    color: #42c3ca;
+}
+
+.logo td:last-child {
+    padding-left: 20px;
+    font-size: 14px;
+}
+.middle td:last-child{
+    padding: 25px;
+}
+
+.logo a {
+    text-decoration: none;
+    font-size: 25px;
+    color: #333;
+    margin: 0 15px;
+    transition: color 0.3s ease-in-out;
+}
+
+.logo a:hover {
+    color: #e74c3c;
+}
+
+.middle {
+    /* background-image:url("img2.jpg");
+    background-repeat: no-repeat;
+    background-repeat:100%; */
+    background-color:rgb(66, 139, 202,0.5);
+    width: 100%;
+    padding: 20px;
+    margin-left: 20px;
+    /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); */
+}
+
+.bottom ul{
+    font-size: 28px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: darkcyan;
+}
+
+/* .bottom img { 
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}*/
+
+.nav_down {
+    background-color: #2ecc71;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.login-box h2 {
+    font-size:30px;
+    /* position: fixed; */
+    color:#fff;
+    margin-bottom: 15px;
+}
+.bottom {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    height: 500px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-box {
+    width: 500px;
+    height:300px;
+    background-color: rgb(66, 139, 202,0.5);
+    text-align: center;
+    
+}
+
+.login-box input {
+    width:50%;
+    height: 20px;
+    padding: 10px;
+    border: 5px;
+    border-radius: 25px;
+}
+.login-box input:hover{
+    width:70%;
+    border: 5px solid deepskyblue;
+    border-radius: 25px;
+    transition:0.3s ;
+
+}
+
+.login-box button {
+    background-color: #e74c3c;
+    width: 100px;
+    color: #fff;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.login-box button:hover {
+    background-color: #3f0e09; 
+}
