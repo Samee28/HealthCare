@@ -1,1 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Booking</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
+    rel="stylesheet"
+  />
+    <style>
+        :root {
+            --primary-color: #55a5e7;
+            --primary-color-dark: #225f99;
+            --primary-color-light: #e9f7f7;
+            --secondary-color: #fb923c;
+            --text-dark: #333333;
+            --text-light: #767268;
+            --white: #ffffff;
+            --max-width: 1200px;
+          }body {
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+            background-color:rgb(104, 141, 157);
+           
+         
+        }
+        h2{
+            font-size: 50px;
+            font-weight: 400px;
+        }
+        .top {
+            padding: 20px;
+            background-image: url("https://media.istockphoto.com/id/1355029634/photo/health-care-and-technology.jpg?s=2048x2048&w=is&k=20&c=tQLU72RZLQ2OX3WtDwTP5yXcX8HgbO5ifKGkwQiqMng=");
+            background-repeat: no-repeat;
+            background-size: cover;
+            height:100px;
+            
+        }
+        
+        .logo {
+            background-color: #fff;
+            padding: 10px;
+            text-align: center;
+            
+        }
+        
+        .logo table {
+            width: 100%;
+        }
+        
+        .logo td:first-child {
+            font-size: 50px;
+            font-family: 'forte', cursive;
+            color: #42c3ca;
+        }
+        
+        .logo td:last-child {
+            padding-left: 20px;
+            font-size: 14px;
+        }
+        .middle td:last-child{
+            padding: 25px;
+        }
+        
+        .logo a {
+            text-decoration: none;
+            font-size: 25px;
+            color: #333;
+            margin: 0 15px;
+            transition: color 0.3s ease-in-out;
+        }
+        
+        .logo a:hover {
+            color: #e74c3c;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #dfe3e5;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #4d0a0a;
+        }
+
+        form fieldset {
+            margin-bottom: 20px;
+            border: none;
+        }
+
+        legend {
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="time"],
+        input[type="email"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .note {
+            font-style: italic;
+            color: #555;
+        }
+
+        .thankyou {
+            font-weight: bold;
+            text-align: center;
+            color: #007bff;
+        }
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+        .top img{
+            border-radius: 50%;
+            background: transparent;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="top">
+        <img src="logo.jpeg">
+        
+    </div>
+
+    <div class="logo">
+        <div>
+   
+                
+              
+            </div>
+            <table>
+                <tr>
+                    <td width="600px" color="#428bca" font-size="30px">
+                        <pre></pre>HealthCare </font><font color="#000"> Hub</font> </font>
+                        
+                    </td>
+                    <td>
+                        <a href="#index"><i class="ri-home-2-line"></i> Home</a>
+                        <a href="#about"><i class="ri-information-line"></i> About Us</a>
+                        <a href="#services"><i class="ri-stethoscope-line"></i> Services</a>
+                        <a href="#doctors"><i class="ri-doctor-line"></i> Doctors</a>
+                        <a href="#contact"><i class="ri-mail-line"></i> Contact Us</a>
+                        </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="container">
+        <h1>Appointment Booking</h1>
+        <form id="appointmentForm" action="submit_form.php" method="POST">
+            <!-- Patient Information -->
+            <fieldset>
+                <legend>Patient Information:</legend>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br>
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required><br>
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select><br>
+                <label for="contact">Contact Number:</label>
+                <input type="tel" id="contact" name="contact" required><br>
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required><br>
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" required></textarea><br>
+            </fieldset>
+            
+    
+            <fieldset>
+                <legend>Appointment Details:</legend>
+                <label for="date">Preferred Date:</label>
+                <input type="date" id="date" name="date" required><br>
+                <label for="time">Preferred Time:</label>
+                <input type="time" id="time" name="time" required><br>
+                <label for="appointment_type">Type of Appointment:</label>
+                <input type="text" id="appointment_type" name="appointment_type" required><br>
+                <label for="reason">Reason for Appointment:</label>
+                <textarea id="reason" name="reason" required></textarea><br>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Additional Information:</legend>
+                <label for="insurance">Insurance Provider:</label>
+                <input type="text" id="insurance" name="insurance"><br>
+                <label for="requests">Any Specific Requests or Concerns:</label>
+                <textarea id="requests" name="requests"></textarea><br>
+            </fieldset>
+            
+            
+            <fieldset>
+                <legend>Preferred Contact Method:</legend>
+                <input type="checkbox" id="phone" name="contact_method" value="phone">
+                <label for="phone">Phone</label>
+                <input type="checkbox" id="email_contact" name="contact_method" value="email">
+                <label for="email_contact">Email</label><br>
+            </fieldset>
+            
+            <!-- Consent -->
+            <fieldset>
+                <legend>Consent:</legend>
+                <p>By submitting this form, I consent to Healthcare Hub contacting me to schedule the requested appointment and to use my provided information for appointment-related communication.</p>
+                <label for="signature">Signature:</label>
+                <input type="text" id="signature" name="signature" required><br>
+                <label for="date_signed">Date:</label>
+                <input type="date" id="date_signed" name="date_signed" required><br>
+            </fieldset>
+            
+            <!-- Submit Button -->
+            <button type="submit">Submit</button>
+        </form>
+        <p class="note">Note: Please allow up to 24 hours for us to process your appointment request. Our staff will contact you via your preferred contact method to confirm your appointment. If you require immediate assistance, please call our office directly at [Phone Number -9893654672].</p>
+        <p class="thankyou">Thank you for choosing Healthcare Hub for your healthcare needs. We look forward to assisting you.</p>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+           
+            const form = document.getElementById("appointmentForm");
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+               
+                if (validateForm()) {
+                    submitFormData();
+                } else {
+                    alert("Please fill out all required fields.");
+                }
+            });
+
+         
+            function validateForm() {
+                const requiredFields = document.querySelectorAll("[required]");
+                for (const field of requiredFields) {
+                    if (!field.value.trim()) {
+                        return false; 
+                }
+                return true; 
+            }
+
+            
+            function submitFormData() {
+         
+                const formData = new FormData(form);
+  
+                fetch(form.action, {
+                    method: form.method,
+                    body: formData
+                })
+                .then(response => {
+                    if (response.ok) {
+                    
+                        form.reset(); // Clear form fields
+                        alert("Appointment request submitted successfully!");
+                    } else {
+                     
+                        alert("Failed to submit appointment request. Please try again later.");
+                    }
+                })
+                .catch(error => {
+                   
+                    console.error("Error:", error);
+                    alert("Network error occurred. Please try again later.");
+                });
+            }
+        });
+    </script>
+</body>
+</html>
 
